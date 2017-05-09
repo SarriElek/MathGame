@@ -1,7 +1,7 @@
 class Question
 
-  @@congratulations = ["Way to go!", "Keep up the good work"]
-  @@punishments = ["Seriously? No!", "ZOMG No NO NOOO"]
+  @@congratulations = ["Way to go!", "Keep up the good work", "Yay!!"]
+  @@punishments = ["Seriously? No!", "ZOMG No NO NOOO", "Try harder"]
 
   def initialize
     @number1 = rand(1..20)

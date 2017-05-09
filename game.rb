@@ -10,10 +10,11 @@ class Game
     while !@finished
       turn = Turn.new(@current_user)
       turn.init_turn
-      puts "#{@current_user.print_score} vs #{next_user.print_score}"
+      puts "#{@current_user.print_score_name} vs #{next_user.print_score_name}"
       @finished = game_finished?
       @current_user = next_user
     end
+    print_final_score
     puts "----- GAME OVER -----"
   end
 
@@ -23,6 +24,10 @@ class Game
 
   def next_user
     @players.find {|player| player.name != @current_user.name}
+  end
+
+  def print_final_score
+    puts "#{@current_user.name} wins with a score of #{@current_user.print_score}"
   end
 
 end
