@@ -2,6 +2,8 @@ class Player
 
 INITIAL_LIVES = 3
 
+attr_reader :name
+
 def initialize(name)
   @name = name
   @lives = INITIAL_LIVES
