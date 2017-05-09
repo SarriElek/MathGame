@@ -2,10 +2,11 @@ class Player
 
 INITIAL_LIVES = 3
 
-attr_reader :name
+attr_reader :name, :short_name, :lives
 
-def initialize(name)
+def initialize(name, short_name)
   @name = name
+  @short_name = short_name
   @lives = INITIAL_LIVES
 end
 
@@ -14,7 +15,7 @@ def lose_life
 end
 
 def print_score
-  "#{@name} #{@lives}/#{INITIAL_LIVES}"
+  "#{@short_name}: #{@lives}/#{INITIAL_LIVES}"
 end
 
 end
